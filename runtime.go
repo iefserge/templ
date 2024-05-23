@@ -332,6 +332,7 @@ func CSSID(name string, css string) string {
 // CSS if the request path matches, or updates the HTTP context to ensure that any handlers that
 // use templ.Components skip rendering <style> elements for classes that are included in the global
 // stylesheet. By default, the stylesheet path is /styles/templ.css
+// Test.
 func NewCSSMiddleware(next http.Handler, classes ...CSSClass) CSSMiddleware {
 	return CSSMiddleware{
 		Path:       "/styles/templ.css",
